@@ -25,8 +25,8 @@ class Counter extends Component {
 
         <br></br>
         <button
-          onClick = {this.handelIncrement}
-          className ="btn btn-sm btn-secondary" 
+          onClick={ () => this.handelIncrement({id : 1}) }
+          className="btn btn-sm btn-secondary"
         >
           Increment{" "}
         </button>
@@ -37,9 +37,14 @@ class Counter extends Component {
     );
   }
 
-  handelIncrement = () => {
+  handelIncrement = (product) => {
+    console.log(product);
     this.setState({count : this.state.count + 1})
   }
+
+  // doHandelIncrement = () => {
+  //   this.handelIncrement({id : 1});
+  // }
 
   renderTags() {
     if (this.state.tags.length === 0) return <p>there are no tags!</p>;
