@@ -11,11 +11,10 @@ class Counter extends Component {
     let classes = this.getBadgeClass();
     return (
       <React.Fragment>
-        <img src={this.state.image} alt="" />
-        <br></br>
+       
         <span
           style={{
-            fontSize: 50,
+            fontSize: 20,
             fontWeight: "bold",
           }}
           className={classes}
@@ -23,16 +22,14 @@ class Counter extends Component {
           {this.formatCounter()}
         </span>
 
-        <br></br>
         <button
           onClick={ () => this.handelIncrement({id : 1}) }
-          className="btn btn-sm btn-secondary"
+          className="btn btn-secondary"
         >
           Increment{" "}
         </button>
         <br></br>
-        {this.state.tags.length === 0 && "please create a new tag!"}
-        {this.renderTags()}
+        
       </React.Fragment>
     );
   }
@@ -46,17 +43,17 @@ class Counter extends Component {
   //   this.handelIncrement({id : 1});
   // }
 
-  renderTags() {
-    if (this.state.tags.length === 0) return <p>there are no tags!</p>;
+  // renderTags() {
+  //   if (this.state.tags.length === 0) return <p>there are no tags!</p>;
 
-    return (
-      <ul>
-        {this.state.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-    );
-  }
+  //   return (
+  //     <ul>
+  //       {this.state.tags.map((tag) => (
+  //         <li key={tag}>{tag}</li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
   getBadgeClass() {
     let classes = "badge m-4 ";
