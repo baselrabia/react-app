@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
   state = {
-    count: 0,
-    image: "https://picsum.photos/200",
-    tags: ["tag1", "tag2", "tag3"],
+    count: this.props.value,
+    // image: "https://picsum.photos/200",
+    // tags: ["tag1", "tag2", "tag3"],
   };
 
+
   render() {
+
+    //  console.log("props" , this.props);
+
     let classes = this.getBadgeClass();
     return (
       <React.Fragment>
