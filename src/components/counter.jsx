@@ -38,7 +38,7 @@ class Counter extends Component {
   }
 
   handelIncrement = () => {
-    console.log( "this is print fom handel method" , this);
+    this.setState({count : this.state.count + 1})
   }
 
   renderTags() {
