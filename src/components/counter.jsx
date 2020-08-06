@@ -18,6 +18,11 @@ componentDidUpdate(prevProps,prevState){
 
 }
 
+componentWillUnmount(){
+      console.log("Counter Component -- Unmount");
+
+}
+
   render() {
     //  console.log("props" , this.props);
     console.log("App - counter");
