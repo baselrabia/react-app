@@ -7,6 +7,16 @@ class Counter extends Component {
   //   // image: "https://picsum.photos/200",
   //   // tags: ["tag1", "tag2", "tag3"],
   // };
+ 
+componentDidUpdate(prevProps,prevState){
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+
+    if(prevProps.counter.value !== this.props.counter.value){
+      // ajax call and get new data from server
+    }
+
+}
 
   render() {
     //  console.log("props" , this.props);
