@@ -13,6 +13,22 @@ class App extends Component{
     ],
   };
 
+  constructor(props){
+    super(props);
+    console.log("App - constructor");
+    //this.state = this.props.something
+    //wrong to use --> this.setState  cus it only use after render the state 
+  };
+
+  componentDidMount(){
+    // called after component render into the dom 
+    //perfect place to make ajax calls to get data from the server
+
+   console.log("App - Mount");
+
+  }
+
+
   handleIncrement = (counter) => {
    const counters = this.state.counters;
    const index = counters.indexOf(counter);
@@ -34,6 +50,8 @@ class App extends Component{
  };
 
  render(){
+       console.log("App - main render");
+
    return (
      <React.Fragment>
        <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length} />

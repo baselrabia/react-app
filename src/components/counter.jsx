@@ -10,6 +10,7 @@ class Counter extends Component {
 
   render() {
     //  console.log("props" , this.props);
+    console.log("App - counter");
 
     let classes = this.getBadgeClass();
     return (
